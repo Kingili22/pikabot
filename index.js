@@ -37,7 +37,7 @@ client.on('message', message => {
     if (message.content === 'p!help') {
         message.channel.send({embed: {
             color: 3447003,
-            description: "We have 4 commands, p!help - tells you all the commands, p!version - send the current version, p!ping - Responds with Pong!, p!pikapic - Sends a random pikachu picture and p!github send the github repository link"
+            description: "We have 5 commands, p!help - tells you all the commands, p!version - send the current version, p!ping - Responds with Pong!, p!pikapic - Sends a random pikachu picture and p!github send the github repository link"
           }});
     }
 });
