@@ -18,13 +18,27 @@ client.on('message', message => {
         }
 });
 client.on('message', message => {
+    if (message.content === 'p!github') {
+        message.channel.send({embed: {
+            color: 3447003,
+            description: "This is the github repository link: https://github.com/Kingili22/pikabot"
+          }});
+    }
+});
+client.on('message', message => {
     if (message.content === 'p!version') {
-        message.channel.send('`The bots version is 1.3`');
+        message.channel.send({embed: {
+            color: 3447003,
+            description: "The bots current version is 1.4"
+          }});
     }
 });
 client.on('message', message => {
     if (message.content === 'p!help') {
-        message.channel.send('We have 4 commands, p!help - tells you all the commands, p!version - send the current version, p!ping - Responds with Pong!, p!pikapic - Sends a random pikachu picture');
+        message.channel.send({embed: {
+            color: 3447003,
+            description: "We have 4 commands, p!help - tells you all the commands, p!version - send the current version, p!ping - Responds with Pong!, p!pikapic - Sends a random pikachu picture and p!github send the github repository link"
+          }});
     }
 });
 client.login('TOKEN')
