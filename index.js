@@ -55,7 +55,7 @@ client.on('message', message => {
 });
 client.on('message', message => {
 if (/<@!776092404720730112>|<@776092404720730112/.test(message.content)) {
-    return message.reply('You mentioned me, for commands please run p!help');
+    return message.reply('You mentioned me, for commands please run p!help, the prefix is p!');
 
     }
 });
