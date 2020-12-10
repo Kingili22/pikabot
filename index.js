@@ -39,7 +39,7 @@ client.on('message', message => {
     } else if (message.content === `${prefix}developers`) {
         message.channel.send({embed: {
             color: 3447003,
-            description: "<@535235896530960395> is the main developer, people who contribute a lot get special mention here!\n<@436876982794452992> He is just the best and helped me allot ! :3"
+            description: "<@535235896530960395> is the main developer, people who contribute a lot get special mention here!\n<@436876982794452992> He is just the best and helped a lot ! :3"
           }});
     } else if (message.content === `${prefix}version`) {
         message.channel.send({embed: {
