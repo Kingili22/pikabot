@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const { prefix, token } = require('./config.json');
+const { AkairoClient } = require('discord-akairo');
 
 client.once('ready', () => {
 	console.log('Ready!');
@@ -44,25 +45,33 @@ client.on('message', message => {
     } else if (message.content === `${prefix}version`) {
         message.channel.send({embed: {
             color: 3447003,
-            description: "The bots current version is 1.5.4"
+            description: "The bots current version is 1.7.0"
           }});
-    } else if (message.content === `${prefix}help`) {
-        message.channel.send({embed: {
-            color: 3447003,
-            description: `MAKE SURE TO ONLY USE THIS COMMAND IN DESIGNATED BOT COMMANDS CHANNEL, RUN ${prefix}confirm TO RUN IT`
-          }});
+
+        } else if (message.content === `${prefix}discord`) {
+            message.channel.send({embed: {
+                color: 3447003,
+                description: `This is the support discord link, https://discord.gg/HXK9HBE5GV`
+              }});
+        } else if (message.content === `${prefix}invite`) {
+            message.channel.send({embed: {
+                color: 3447003,
+                description: `This is the top.gg invite link, https://top.gg/bot/776092404720730112/invite`
+                }});
+        } else if (message.content === `${prefix}vote`) {
+            message.channel.send({embed: {
+                color: 3447003,
+                description: `This is the top.gg link, you can vote and comment on it to support the bot! https://top.gg/bot/776092404720730112`
+                }});
     } else if (message.content === `${prefix}confirm`) {
-        (`${prefix}help - tells you all the commands`);
-        (`${prefix}version - send the current version`);
-        (`${prefix}ping - Responds with Pong!`);
-        (`${prefix}pikapic - Sends a random pikachu picture`);
-        (`${prefix}github - sends the github repository link`);
-        (`${prefix}coinflip - flips a coin`);
-        (`${prefix}developers - mentions the main developers`);
-        (`${prefix}patchnotes - displays the patch notes`)
         message.channel.send({embed: {
             color: 3447003,
-            description: `Here are the commands: \n${prefix}help - tells you all the commands\n ${prefix}version - send the current version\n ${prefix}ping - Responds with Pong!\n ${prefix}pikapic - Sends a random pikachu picture\n ${prefix}pokegif - sends a random pokemon gif\n ${prefix}github - sends the github repository link\n ${prefix}coinflip - flips a coin\n ${prefix}developers - mentions the main developers\n ${prefix}patchnotes - displays the patch notes`
+            description: `Here are the commands: \n${prefix}help - tells you all the commands\n ${prefix}version - send the current version\n ${prefix}ping - Responds with Pong!\n ${prefix}pikapic - Sends a random pikachu picture\n ${prefix}pokegif - sends a random pokemon gif\n ${prefix}github - sends the github repository link\n ${prefix}coinflip - flips a coin\n ${prefix}developers - mentions the main developers\n ${prefix}patchnotes - displays the patch notes\n ${prefix}discord - sends the support discord link`
+          }});
+          } else if (message.content === `${prefix}help`) {
+        message.channel.send({embed: {
+            color: 3447003,
+            description: `Here are the commands: \n${prefix}help - tells you all the commands\n ${prefix}version - send the current version\n ${prefix}ping - Responds with Pong!\n ${prefix}pikapic - Sends a random pikachu picture\n ${prefix}pokegif - sends a random pokemon gif\n ${prefix}github - sends the github repository link\n ${prefix}coinflip - flips a coin\n ${prefix}developers - mentions the main developers\n ${prefix}patchnotes - displays the patch notes\n ${prefix}discord - sends the support discord link`
           }});
     }
 });
